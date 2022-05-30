@@ -1,15 +1,31 @@
 // 1365
 
-let nums = [8, 1, 2, 2, 3]
+// let nums = [8, 1, 2, 2, 3]
 
-let count = []
+// let count = []
 
-for (let i = 0; i < nums.length; i++) {
-  let acc = 0
-  for (let j = 0; j < nums.length; j++) {
-    if (nums[i] > nums[j]) acc++
+// for (let i = 0; i < nums.length; i++) {
+//   let acc = 0
+//   for (let j = 0; j < nums.length; j++) {
+//     if (nums[i] > nums[j]) acc++
+//   }
+//   count.push(acc)
+// }
+
+// console.log(count)
+
+// 1313
+
+let nums = [1, 2, 3, 4]
+
+let arr = []
+
+for (let i = 0; i < nums.length; i += 2) {
+  let times = nums[i]
+  while (times > 0) {
+    arr.push(nums[i + 1])
+    times -= 1
   }
-  count.push(acc)
 }
 
-console.log(count)
+console.log(arr)
