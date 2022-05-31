@@ -44,8 +44,6 @@ for (let i = 0; i < nums.length; i++) {
   if (count === 1) arr.push(nums[i])
 }
 
-// let answer = arr.reduce((t, a) => t + a)
-
 if (arr.length > 0) {
   console.log(arr.reduce((t, a) => t + a))
 } else {
