@@ -32,20 +32,20 @@
 
 // 1748
 
-let nums = [1, 2, 3, 2]
+// let nums = [1, 2, 3, 2]
 
-let arr = []
+// let arr = []
 
-for (let i = 0; i < nums.length; i++) {
-  let count = 0
-  for (let j = 0; j < nums.length; j++) {
-    if (nums[i] === nums[j]) count++
-  }
-  if (count === 1) arr.push(nums[i])
-}
+// for (let i = 0; i < nums.length; i++) {
+//   let count = 0
+//   for (let j = 0; j < nums.length; j++) {
+//     if (nums[i] === nums[j]) count++
+//   }
+//   if (count === 1) arr.push(nums[i])
+// }
 
-if (arr.length > 0) {
-  console.log(arr.reduce((t, a) => t + a))
-} else {
-  console.log(0)
-}
+// if (arr.length > 0) {
+//   console.log(arr.reduce((t, a) => t + a))
+// } else {
+//   console.log(0)
+// }
