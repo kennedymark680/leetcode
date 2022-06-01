@@ -52,14 +52,18 @@
 
 // 118
 
-let numRows = 1
+let numRows = 2
 
 let count = numRows
 
-let arr = []
+let arr = [[1]]
 
-while (count > 0) {
+while (count > 1) {
   let newArr = [1]
+  for (let i = 0; i < arr[0].length; i++) {
+    newArr.push(arr[0][0] + arr[0][1])
+  }
+  console.log(newArr, 'newArr')
   arr.push(newArr)
   count--
 }
