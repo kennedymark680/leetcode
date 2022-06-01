@@ -49,3 +49,19 @@
 // } else {
 //   console.log(0)
 // }
+
+// 118
+
+let numRows = 1
+
+let count = numRows
+
+let arr = []
+
+while (count > 0) {
+  let newArr = [1]
+  arr.push(newArr)
+  count--
+}
+
+console.log(arr)
