@@ -52,20 +52,47 @@
 
 // 118
 
-let numRows = 2
+// let numRows = 2
 
+// let count = numRows
+
+// let arr = [[1]]
+
+// while (count > 1) {
+//   let newArr = [1]
+//   for (let i = 0; i < arr[0].length; i++) {
+//     newArr.push(arr[0][0] + arr[0][1])
+//   }
+//   console.log(newArr, 'newArr')
+//   arr.push(newArr)
+//   count--
+// }
+
+// console.log(arr)
+
+let numRows = 3
 let count = numRows
+let start = 2
+let arr = []
 
-let arr = [[1]]
-
-while (count > 1) {
-  let newArr = [1]
-  for (let i = 0; i < arr[0].length; i++) {
-    newArr.push(arr[0][0] + arr[0][1])
+while (count > 0) {
+  if (start === 2) {
+    arr.push([1])
+    start--
+    count--
+  } else if (start === 1) {
+    arr.push([1, 1])
+    start--
+    count--
+  } else {
+    let newArr = [1]
+    let selectedArr = arr
+    for (let i = 0; i < arr[arr.length - 1].length - 1; i++) {
+      console.log('test')
+      // newArr.push()
+    }
+    count--
   }
-  console.log(newArr, 'newArr')
-  arr.push(newArr)
-  count--
 }
 
 console.log(arr)
