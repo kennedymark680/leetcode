@@ -132,7 +132,8 @@ let nums = [1, 2, 2, 3, 1]
 
 const findDegree = (arr) => {
   let degree = 0
-  let sorted = arr.sort((a, b) => (a < b ? -1 : 1))
+  let sliced = arr.slice()
+  let sorted = sliced.sort((a, b) => (a < b ? -1 : 1))
   let count = 1
   let newArr = []
 
@@ -151,10 +152,31 @@ const findDegree = (arr) => {
 
 let degree = findDegree(nums)
 
-const cutArr = (arr) => {
+const cutArr = (arr, degree) => {
   let length = arr.length
   let evalArr = arr
+  let toggle = true
 
-  if (findDegree(evalArr) === degree && evalArr.length < length)
-    length = evalArr.length
+  for (let i = 0; i < arr.length; i++) {
+    if (findDegree(evalArr) === degree && evalArr.length < length) {
+      length = evalArr.length
+    }
+
+    if (toggle) {
+      let newEvalArr = evalArr
+      newEvalArr.pop()
+      evalArr = newEvalArr
+      toggle = false
+    } else {
+      let newEvalArr = evalArr
+      newEvalArr.shift()
+      evalArr = newEvalArr
+      toggle = true
+    }
+  }
+  console.log(length, 'length')
 }
+
+console.log(nums, 'nums')
+
+cutArr(nums, degree)
