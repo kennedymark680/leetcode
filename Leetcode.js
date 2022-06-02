@@ -125,3 +125,30 @@
 // })
 
 // console.log(count)
+
+// 697
+
+let nums = [1, 2, 2, 3, 1]
+
+const findDegree = (arr) => {
+  let degree = 0
+  let sorted = arr.sort((a, b) => (a < b ? -1 : 1))
+  let count = 1
+  let newArr = []
+
+  for (let i = 0; i < sorted.length; i++) {
+    if (sorted[i] === sorted[i + 1]) {
+      count++
+    } else {
+      newArr.push(count)
+      count = 1
+    }
+  }
+  let arrSorted = newArr.sort((a, b) => (a > b ? -1 : 1))
+  degree = arrSorted[0]
+  return degree
+}
+
+let degree = findDegree(nums)
+
+console.log(degree)
