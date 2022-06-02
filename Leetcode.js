@@ -151,4 +151,10 @@ const findDegree = (arr) => {
 
 let degree = findDegree(nums)
 
-console.log(degree)
+const cutArr = (arr) => {
+  let length = arr.length
+  let evalArr = arr
+
+  if (findDegree(evalArr) === degree && evalArr.length < length)
+    length = evalArr.length
+}
