@@ -70,30 +70,30 @@
 
 // console.log(arr)
 
-let numRows = 5
-let count = numRows
-let start = 2
-let arr = []
+// let numRows = 5
+// let count = numRows
+// let start = 2
+// let arr = []
 
-while (count > 0) {
-  if (start === 2) {
-    arr.push([1])
-    start--
-    count--
-  } else if (start === 1) {
-    arr.push([1, 1])
-    start--
-    count--
-  } else {
-    let newArr = [1]
-    let selectedArr = arr[arr.length - 1]
-    for (let i = 0; i < selectedArr.length - 1; i++) {
-      newArr.push(selectedArr[i] + selectedArr[i + 1])
-    }
-    newArr.push(1)
-    arr.push(newArr)
-    count--
-  }
-}
+// while (count > 0) {
+//   if (start === 2) {
+//     arr.push([1])
+//     start--
+//     count--
+//   } else if (start === 1) {
+//     arr.push([1, 1])
+//     start--
+//     count--
+//   } else {
+//     let newArr = [1]
+//     let selectedArr = arr[arr.length - 1]
+//     for (let i = 0; i < selectedArr.length - 1; i++) {
+//       newArr.push(selectedArr[i] + selectedArr[i + 1])
+//     }
+//     newArr.push(1)
+//     arr.push(newArr)
+//     count--
+//   }
+// }
 
-console.log(arr)
+// console.log(arr)
