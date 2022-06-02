@@ -100,18 +100,28 @@
 
 // 1385
 
-let arr1 = [4, 5, 8]
-let arr2 = [10, 9, 1, 8]
-let d = 2
+// let arr1 = [1, 4, 2, 3]
+// let arr2 = [-4, -3, 6, 10, 20, 30]
+// let d = 3
 
-let count = 0
+// let count = 0
 
-for (let i = 0; i < arr1.length; i++) {
-  let arr = []
-  for (let j = 0; j < arr2.length; j++) {
-    arr.push(Math.abs(arr1[i] - arr2[j]))
-  }
-  if (arr.every((e) => e > d)) count++
-}
+// for (let i = 0; i < arr1.length; i++) {
+//   let arr = []
+//   for (let j = 0; j < arr2.length; j++) {
+//     arr.push(Math.abs(arr1[i] - arr2[j]))
+//   }
+//   if (arr.every((e) => e > d)) count++
+// }
 
-console.log(count)
+// console.log(count)
+
+// for (let i = 0; i < arr1.length; i++) {
+//   if (arr2.every((e) => Math.abs(arr1[i] - e) > d)) count++
+// }
+
+// arr1.forEach((n) => {
+//   if (arr2.every((e) => Math.abs(n - e) > d)) count++
+// })
+
+// console.log(count)
