@@ -128,7 +128,7 @@
 
 // 697
 
-let nums = [1, 2, 2, 3, 1]
+let nums = [1, 2, 2, 3, 1, 4, 2]
 
 const findDegree = (arr) => {
   let degree = 0
@@ -154,28 +154,17 @@ let degree = findDegree(nums)
 
 const cutArr = (arr, degree) => {
   let length = arr.length
-  let evalFront = arr
-  let evalEnd = arr
-  let end = 1
-  let front = 1
 
   for (let i = 0; i < arr.length; i++) {
-    if (findDegree(evalFront) === degree && evalFront.length < length) {
-      length = evalFront.length
-    }
+    let end = 0
 
-    let newArr = evalFront.slice(0, evalFront.length - end)
-    console.log(newArr, 'end')
-    end++
-  }
-
-  for (let j = 0; j < arr.length; j++) {
-    let frontArr = evalEnd.slice(front, evalEnd.length)
-    console.log(frontArr, 'front')
-    front++
-
-    if (findDegree(frontArr) === degree && frontArr.length < length) {
-      length = frontArr.length
+    for (let j = 0; j < arr.length - i; j++) {
+      let newArr = arr.slice(i, arr.length - end)
+      console.log(newArr, 'newArr')
+      if (findDegree(newArr) === degree && newArr.length < length) {
+        length = newArr.length
+      }
+      end++
     }
   }
   console.log(length, 'length')
@@ -184,3 +173,44 @@ const cutArr = (arr, degree) => {
 cutArr(nums, degree)
 
 //[1, 2, 2, 3, 1]
+
+// let length = arr.length
+// let evalFront = arr
+// let evalEnd = arr
+// let end = 1
+// let front = 1
+// let start = 1
+// let finish = 1
+
+// for (let i = 0; i < arr.length; i++) {
+//   let newArr = evalFront.slice(0, evalFront.length - end)
+//   console.log(newArr, 'end')
+//   end++
+
+//   if (findDegree(newArr) === degree && newArr.length < length) {
+//     length = newArr.length
+//   }
+// }
+
+// for (let j = 0; j < arr.length; j++) {
+//   let frontArr = evalEnd.slice(front, evalEnd.length)
+//   console.log(frontArr, 'front')
+//   front++
+
+//   if (findDegree(frontArr) === degree && frontArr.length < length) {
+//     length = frontArr.length
+//   }
+// }
+
+// for (let j = 0; j < arr.length; j++) {
+//   let arr = evalEnd.slice(start, evalEnd.length - finish)
+//   console.log(arr, 'arr')
+//   start++
+//   finish++
+
+//   if (findDegree(arr) === degree && arr.length < length) {
+//     length = arr.length
+//   }
+// }
+
+// console.log(length, 'length')
