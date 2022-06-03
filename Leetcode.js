@@ -170,13 +170,13 @@ const cutArr = (arr, degree) => {
   }
 
   for (let j = 0; j < arr.length; j++) {
-    if (findDegree(evalEnd) === degree && evalEnd.length < length) {
-      length = evalEnd.length
-    }
-
-    let newArr = evalEnd.splice(front, evalEnd.length - 1)
-    console.log(newArr, 'front')
+    let frontArr = evalEnd.slice(front, evalEnd.length)
+    console.log(frontArr, 'front')
     front++
+
+    if (findDegree(frontArr) === degree && frontArr.length < length) {
+      length = frontArr.length
+    }
   }
   console.log(length, 'length')
 }
