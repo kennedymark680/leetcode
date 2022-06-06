@@ -128,49 +128,49 @@
 
 // 697
 
-let nums = [1, 2, 2, 3, 1, 4, 2]
+// let nums = [1, 2, 2, 3, 1, 4, 2]
 
-const findDegree = (arr) => {
-  let degree = 0
-  let sliced = arr.slice()
-  let sorted = sliced.sort((a, b) => (a < b ? -1 : 1))
-  let count = 1
-  let newArr = []
+// const findDegree = (arr) => {
+//   let degree = 0
+//   let sliced = arr.slice()
+//   let sorted = sliced.sort((a, b) => (a < b ? -1 : 1))
+//   let count = 1
+//   let newArr = []
 
-  for (let i = 0; i < sorted.length; i++) {
-    if (sorted[i] === sorted[i + 1]) {
-      count++
-    } else {
-      newArr.push(count)
-      count = 1
-    }
-  }
-  let arrSorted = newArr.sort((a, b) => (a > b ? -1 : 1))
-  degree = arrSorted[0]
-  return degree
-}
+//   for (let i = 0; i < sorted.length; i++) {
+//     if (sorted[i] === sorted[i + 1]) {
+//       count++
+//     } else {
+//       newArr.push(count)
+//       count = 1
+//     }
+//   }
+//   let arrSorted = newArr.sort((a, b) => (a > b ? -1 : 1))
+//   degree = arrSorted[0]
+//   return degree
+// }
 
-let degree = findDegree(nums)
+// let degree = findDegree(nums)
 
-const cutArr = (arr, degree) => {
-  let length = arr.length
+// const cutArr = (arr, degree) => {
+//   let length = arr.length
 
-  for (let i = 0; i < arr.length; i++) {
-    let end = 0
+//   for (let i = 0; i < arr.length; i++) {
+//     let end = 0
 
-    for (let j = 0; j < arr.length - i; j++) {
-      let newArr = arr.slice(i, arr.length - end)
-      console.log(newArr, 'newArr')
-      if (findDegree(newArr) === degree && newArr.length < length) {
-        length = newArr.length
-      }
-      end++
-    }
-  }
-  console.log(length, 'length')
-}
+//     for (let j = 0; j < arr.length - i; j++) {
+//       let newArr = arr.slice(i, arr.length - end)
+//       console.log(newArr, 'newArr')
+//       if (findDegree(newArr) === degree && newArr.length < length) {
+//         length = newArr.length
+//       }
+//       end++
+//     }
+//   }
+//   console.log(length, 'length')
+// }
 
-cutArr(nums, degree)
+// cutArr(nums, degree)
 
 //[1, 2, 2, 3, 1]
 
@@ -214,3 +214,31 @@ cutArr(nums, degree)
 // }
 
 // console.log(length, 'length')
+
+// const findShortestSubArray = nums => {
+//   let maxFrequence = 0
+//   let freq = {}
+//   let first = {}
+//   let shortestSubArray = 1
+
+//   for (let i = 0; i < nums.length; i++) {
+//       const num = nums[i]
+//       if (freq[num]) {
+//           freq[num]++
+//       } else {
+//           freq[num] = 1
+//           first[num] = i
+//       }
+
+//       if (freq[num] > maxFrequence) {
+//           maxFrequence = freq[num]
+//           shortestSubArray = i - first[num] + 1
+//       }
+
+//       if (freq[num] === maxFrequence) {
+//           shortestSubArray = Math.min(shortestSubArray, i - first[num] + 1)
+//       }
+//   }
+
+//   return shortestSubArray
+// };
