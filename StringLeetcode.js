@@ -43,3 +43,26 @@
 // let command = 'G()()()(al)'
 
 // console.log(command.replaceAll('()', 'o').replaceAll('(al)', 'al'), 'command')
+
+// 1614
+
+// let s = '3*4-2*5'
+
+// let count = 0
+// let arr = []
+
+// if (s.length > 1 && s.includes('(' || ')')) {
+//   for (let i = 0; i < s.length; i++) {
+//     if (s[i] === '(') {
+//       count++
+//       arr.push(count)
+//     }
+//     if (s[i] === ')') {
+//       count--
+//       arr.push(count)
+//     }
+//   }
+//   console.log(Math.max(...arr), 'arr')
+// } else {
+//   console.log(0)
+// }
