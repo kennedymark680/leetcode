@@ -40,8 +40,6 @@
 
 // 1678
 
-let command = 'G()()()(al)'
+// let command = 'G()()()(al)'
 
-command.replace('()', 'o')
-
-console.log(command.replaceAll('()', 'o').replaceAll('(al)', 'al'), 'command')
+// console.log(command.replaceAll('()', 'o').replaceAll('(al)', 'al'), 'command')
