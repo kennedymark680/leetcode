@@ -1,3 +1,5 @@
 const str = 'Hello World'
+const first = 'Mark'
+const last = 'Kennedy'
 
-console.log(str.charAt(5))
+console.log(first.concat(' ', last))
