@@ -67,4 +67,34 @@
 //   console.log(0)
 // }
 
-// 2103
+// 1496
+
+let path = 'NES'
+
+let ns = 0
+let ew = 0
+
+let cordArr = []
+
+for (let i = 0; i < path.length; i++) {
+  switch (path.charAt(i)) {
+    case 'N':
+      ns++
+      cordArr.push(ns, ew)
+      break
+    case 'S':
+      ns--
+      cordArr.push(ns, ew)
+      break
+    case 'E':
+      ew++
+      cordArr.push(ns, ew)
+      break
+    default:
+      ew--
+      cordArr.push(ns, ew)
+      break
+  }
+}
+
+console.log(cordArr, 'cordArr')
