@@ -245,20 +245,43 @@
 
 // 167
 
-let numbers = [2, 7, 11, 15]
-let target = 9
-let start = 0
-let end = numbers.length - 1
+// let numbers = [2, 7, 11, 15]
+// let target = 9
+// let start = 0
+// let end = numbers.length - 1
 
-numbers.indexOf()
+// numbers.indexOf()
 
-for (let i = 0; i < numbers.length; i++) {
-  for (let j = i + 1; j < numbers.length; j++) {
-    if (numbers[i] + numbers[j] === target) {
-      sum.push(i + 1)
-      sum.push(j + 1)
-    }
+// for (let i = 0; i < numbers.length; i++) {
+//   for (let j = i + 1; j < numbers.length; j++) {
+//     if (numbers[i] + numbers[j] === target) {
+//       sum.push(i + 1)
+//       sum.push(j + 1)
+//     }
+//   }
+// }
+
+// console.log(sum)
+
+// 2
+
+let l1 = [2, 4, 3]
+let l2 = [5, 6, 4]
+
+const number = (array) => {
+  let number = ''
+  for (let i = array.length - 1; i >= 0; i--) {
+    number += array[i]
   }
+  return parseInt(number)
 }
 
-console.log(sum)
+let result = number(l1) + number(l2)
+let stringResult = result.toString()
+let answer = []
+
+for (let i = stringResult.length - 1; i >= 0; i--) {
+  answer.push(parseInt(stringResult[i]))
+}
+
+console.log(answer, 'answer')
