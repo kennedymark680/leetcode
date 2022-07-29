@@ -265,23 +265,37 @@
 
 // 2
 
-let l1 = [2, 4, 3]
-let l2 = [5, 6, 4]
+// let l1 = [2, 4, 3]
+// let l2 = [5, 6, 4]
 
-const number = (array) => {
-  let number = ''
-  for (let i = array.length - 1; i >= 0; i--) {
-    number += array[i]
-  }
-  return parseInt(number)
+// const number = (array) => {
+//   let number = ''
+//   for (let i = array.length - 1; i >= 0; i--) {
+//     number += array[i]
+//   }
+//   return parseInt(number)
+// }
+
+// let result = number(l1) + number(l2)
+// let stringResult = result.toString()
+// let answer = []
+
+// for (let i = stringResult.length - 1; i >= 0; i--) {
+//   answer.push(parseInt(stringResult[i]))
+// }
+
+// console.log(answer, 'answer')
+
+
+// 1528
+
+const s = 'codeleet'
+const indices = [4, 5, 6, 7, 0, 2, 1, 3]
+
+const answer = []
+
+for (let i = 0; i < indices.length; i++) {
+  answer[indices[i]] = s[i]
 }
 
-let result = number(l1) + number(l2)
-let stringResult = result.toString()
-let answer = []
-
-for (let i = stringResult.length - 1; i >= 0; i--) {
-  answer.push(parseInt(stringResult[i]))
-}
-
-console.log(answer, 'answer')
+console.log(answer.join(''), 'answer')
